@@ -52,3 +52,20 @@ function monstrarValorMedioDasTransacoes (){
 
   }
   console.log(monstrarValorMedioDasTransacoes());
+
+  function buscarContagemdeTransacoes(){
+    let deposito = 0 
+    let saque = 0 
+
+    //Verificar quantos depositos e quantos saques houveram
+
+    for (let transacao of usuario.transacoes) {
+        if (transacao.tipo == "deposito"){
+            deposito = deposito + 1;
+        }else if (transacao.tipo == "saque"){
+            saque++;
+        }
+    }
+    console.log({deposito, saque}); 
+  }
+  buscarContagemdeTransacoes();
